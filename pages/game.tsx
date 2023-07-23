@@ -24,7 +24,7 @@ const Game = (): ReactElement => {
   const imgurl = images?.webp?.large_image_url ?? images?.webp?.image_url;
 
   const genreTags = genres?.map((genre: JikanResource) => genre.name) ?? [];
-  const themeTags = themes.map((theme: JikanResource) => theme.name) ?? [];
+  const themeTags = themes?.map((theme: JikanResource) => theme.name) ?? [];
   const tags = [...genreTags, ...themeTags].toString();
 
   return (
