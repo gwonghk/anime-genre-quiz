@@ -1,15 +1,22 @@
+import React from 'react';
 import '@/assets/base.css';
 import { Layout } from '@/components/Layout';
 import { ThemeProvider } from 'next-themes';
 import { Toaster } from 'react-hot-toast';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
-export default function MyApp({ Component, pageProps }) {
+const queryClient = new QueryClient();
+
+const MyApp = ({ Component, pageProps }) => {
   return (
-    <ThemeProvider>
-      <Layout>
-        <Component {...pageProps} />
-        <Toaster />
-      </Layout>
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider>
+        <Layout>
+          <Component {...pageProps} />
+          <Toaster />
+        </Layout>
+      </ThemeProvider>
+    </QueryClientProvider>
   );
-}
+};
+export default MyApp;

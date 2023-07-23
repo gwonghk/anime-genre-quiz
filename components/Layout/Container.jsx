@@ -4,10 +4,11 @@ import styles from './Container.module.css';
 const Container = ({
   justifyContent,
   flex,
+  flexDirection,
   alignItems,
   column,
   className,
-  children,
+  children
 }) => {
   return (
     <div
@@ -16,6 +17,7 @@ const Container = ({
         justifyContent,
         flex,
         alignItems,
+        flexDirection
       }}
     >
       {children}

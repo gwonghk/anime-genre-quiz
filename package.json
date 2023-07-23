@@ -21,6 +21,7 @@
   "homepage": "https://github.com/hoangvvo/nextjs-mongodb-app#readme",
   "dependencies": {
     "@lukeed/ms": "^2.0.0",
+    "@tutkli/jikan-ts": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^6.1.0",
     "ajv": "^8.11.0",
@@ -50,6 +51,7 @@
     "validator": "^13.7.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
     "@types/react": "18.2.15",
     "eslint": "^8.0.1",
     "eslint-config-next": "^13.4.12",
